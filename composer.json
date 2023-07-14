@@ -6,6 +6,8 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "graham-campbell/github": "12.2",
+        "graham-campbell/markdown": "15.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.2",
