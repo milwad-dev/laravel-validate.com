@@ -13,10 +13,12 @@ class DocsController extends Controller
             return to_route('docs', ['version' => $version, 'page' => 'introduction']);
         }
 
-        $fileContent = GitHub::api('repo')->contents()->show('milwad-dev', 'laravel-validate', 'README.md', '1.x');
+        $fileContent = GitHub::api('repo')
+            ->contents()
+            ->show('milwad-dev', 'laravel-validate', "docs/1.x/$page.md", $version);
         $markdownContent = base64_decode($fileContent['content']);
-        $processedContent = Markdown::convertToHtml($markdownContent);
+        $content = Markdown::convertToHtml($markdownContent);
 
-        return view('docs', compact('processedContent'));
+        return view('docs', compact('content', 'version'));
     }
 }
