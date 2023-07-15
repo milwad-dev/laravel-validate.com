@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('home.index');
 
 Route::get('docs/{version}/{page?}', DocsController::class)->name('docs');
