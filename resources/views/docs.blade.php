@@ -2,6 +2,14 @@
 
 @section('title', convertToAsideTitle($page))
 
+@section('css')
+    <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/all.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap-select.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/font-size/css/rvfs.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/niceselectpicker/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/prism/prism.css') }}">
+@endsection
+
 @section('banner-area')
     <section class="breadcrumb_area">
         <img class="p_absolute bl_left" src="{{ asset('img/v.svg') }}" alt="">
@@ -45,4 +53,10 @@
     <script>
         $('table').addClass('table basic_table_info table-hover')
     </script>
+
+    <script src="{{ asset('assets/bootstrap/js/bootstrap-select.min.js') }}"></script>
+    <script src="{{ asset('assets/font-size/js/rv-jquery-fontsize-2.0.3.js') }}"></script>
+    <script src="{{ asset('js/anchor.js') }}"></script>
+    <script src="{{ asset('assets/prism/prism.js') }}"></script>
+    <script src="{{ asset('assets/niceselectpicker/jquery.nice-select.min.js') }}"></script>
 @endsection

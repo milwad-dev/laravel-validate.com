@@ -7,3 +7,4 @@
 <link rel="stylesheet" href="{{ asset('assets/mcustomscrollbar/jquery.mCustomScrollbar.min.css') }}">
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+@yield('css')
