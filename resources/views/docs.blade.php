@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', '')
+@section('title', convertToAsideTitle($page))
 
 @section('banner-area')
     <section class="breadcrumb_area">

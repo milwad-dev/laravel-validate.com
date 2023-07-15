@@ -15,10 +15,10 @@ class DocsController extends Controller
 
         $fileContent = GitHub::api('repo')
             ->contents()
-            ->show('milwad-dev', 'laravel-validate', "docs/1.x/$page.md", $version);
+            ->show('milwad-dev', 'laravel-validate', "docs/$version/$page.md", $version);
         $markdownContent = base64_decode($fileContent['content']);
         $content = Markdown::convertToHtml($markdownContent);
 
-        return view('docs', compact('content', 'version'));
+        return view('docs', compact('content', 'version', 'page'));
     }
 }
