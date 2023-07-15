@@ -10,3 +10,4 @@
 <script src="{{ asset('assets/wow/wow.min.js') }}"></script>
 <script src="{{ asset('assets/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js') }}"></script>
 <script src="{{ asset('js/main.js') }}"></script>
+@yield('js')

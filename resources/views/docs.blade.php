@@ -39,3 +39,10 @@
         </div>
     </section>
 @endsection
+
+@section('js')
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $('table').addClass('table basic_table_info table-hover')
+    </script>
+@endsection
