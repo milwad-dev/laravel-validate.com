@@ -1,26 +1,23 @@
 <footer class="footer_area f_bg_color">
-    <img class="p_absolute leaf" src="img/v.svg" alt="">
-    <img class="p_absolute f_man" src="img/home_two/f_man.png" alt="">
-    <img class="p_absolute f_cloud" src="img/home_two/cloud.png" alt="">
-    <img class="p_absolute f_email" src="img/home_two/email-icon.png" alt="">
-    <img class="p_absolute f_email_two" src="img/home_two/email-icon_two.png" alt="">
-    <img class="p_absolute f_man_two" src="img/home_two/man.png" alt="">
+    <img class="p_absolute leaf" src="{{ asset('img/v.svg') }}" alt="">
+    <img class="p_absolute f_man" src="{{ asset('img/home_two/f_man.png') }}" alt="">
+    <img class="p_absolute f_cloud" src="{{ asset('img/home_two/cloud.png') }}" alt="">
+    <img class="p_absolute f_email" src="{{ asset('img/home_two/email-icon.png') }}" alt="">
+    <img class="p_absolute f_email_two" src="{{ asset('img/home_two/email-icon_two.png') }}" alt="">
+    <img class="p_absolute f_man_two" src="{{ asset('img/home_two/man.png') }}" alt="">
     <div class="footer_top">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-sm-6">
                     <div class="f_widget subscribe_widget">
-                        <a href="index.html" class="f_logo"><img src="img/logo.png" alt=""></a>
-                        <h4 class="c_head">Subscribe to our newsletter</h4>
-                        <form action="#" class="footer_subscribe_form">
-                            <input type="email" placeholder="Email" class="form-control">
-                            <button type="submit" class="s_btn">Send</button>
-                        </form>
+                        <a href="{{ route('home.index') }}" class="f_logo">
+                            <img src="{{ asset('img/logo.png') }}" width="80" alt="logo">
+                        </a>
                         <ul class="list-unstyled f_social_icon">
-                            <li><a href="#"><i class="social_facebook"></i></a></li>
-                            <li><a href="#"><i class="social_twitter"></i></a></li>
-                            <li><a href="#"><i class="social_vimeo"></i></a></li>
-                            <li><a href="#"><i class="social_linkedin"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UClbxZk9EdsuVxx26LXzPeZg"><i class="social_youtube"></i></a></li>
+                            <li><a href="https://twitter.com/MilwadDev"><i class="social_twitter"></i></a></li>
+                            <li><a href="mailto:milwad.dev@gmail.com"><i class="social_googleplus"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/milwad-khosravi/"><i class="social_linkedin"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -72,7 +69,10 @@
     </div>
     <div class="footer_bottom text-center">
         <div class="container">
-            <p>© 2020 All Rights Reserved by <a href="index.html">Docly</a></p>
+            <p>
+                © 2023 Design with <i class="icon_heart text-danger"></i> & <i class="icon_mug_alt text-brown"></i> BY
+                <a href="https://github.com/milwad-dev">Milwad</a>
+            </p>
         </div>
     </div>
 </footer>
