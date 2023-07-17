@@ -27,3 +27,4 @@ Route::get('/', function () {
 })->name('home.index');
 
 Route::get('docs/{version}/{page?}', DocsController::class)->name('docs');
+Route::view('docs-not-found', 'docs.not-found-page')->name('docs.not-found');

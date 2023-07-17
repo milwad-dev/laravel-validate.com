@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use GrahamCampbell\GitHub\Facades\GitHub;
 use GrahamCampbell\Markdown\Facades\Markdown;
+use Illuminate\Support\Facades\Cache;
 
 class DocsController extends Controller
 {
@@ -13,12 +14,20 @@ class DocsController extends Controller
             return to_route('docs', ['version' => $version, 'page' => 'introduction']);
         }
 
-        $fileContent = GitHub::api('repo')
-            ->contents()
-            ->show('milwad-dev', 'laravel-validate', "docs/$version/$page.md", $version);
-        $markdownContent = base64_decode($fileContent['content']);
-        $content = Markdown::convertToHtml($markdownContent);
+        try {
+            $content = Cache::remember("docs.$version.$page", 5, function () use ($version, $page) {
+                $fileContent = GitHub::api('repo')
+                    ->contents()
+                    ->show('milwad-dev', 'laravel-validate', "docs/$version/$page.md", $version);
 
-        return view('docs', compact('content', 'version', 'page'));
+                $markdownContent = base64_decode($fileContent['content']);
+
+                return Markdown::convertToHtml($markdownContent);
+            });
+
+            return view('docs', compact('content', 'version', 'page'));
+        } catch (\Exception $e) {
+            return to_route('docs.not-found');
+        }
     }
 }

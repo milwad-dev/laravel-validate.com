@@ -15,7 +15,7 @@
                         <ul class="list-unstyled dropdown_nav">
                             @foreach($sidebar as $side)
                                 <li>
-                                    <a href="{{ route('docs', ['version' => $version, 'page' => $side]) }}">
+                                    <a href="{{ route('docs', ['version' => $version ?? config('app.doc-version'), 'page' => $side]) }}">
                                         {{ convertToAsideTitle($side) }}
                                     </a>
                                 </li>
@@ -24,7 +24,7 @@
                     </li>
                 @else
                     <li class="nav-item">
-                        <a href="{{ route('docs', ['version' => $version, 'page' => $sidebar]) }}" class="nav-link">
+                        <a href="{{ route('docs', ['version' => $version ?? config('app.doc-version'), 'page' => $sidebar]) }}" class="nav-link">
                             {{ convertToAsideTitle($sidebar) }}
                         </a>
                     </li>
