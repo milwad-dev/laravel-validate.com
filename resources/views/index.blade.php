@@ -34,7 +34,7 @@
     <section class="doc_features_area_one">
         <div class="container">
             <div class="section_title text-center">
-                <h2 class="h_title wow fadeInUp">Why {{ config('app.name') }}?</h2>
+                <h2 class="h_title wow fadeInUp">Why {{ $appName }}?</h2>
             </div>
             <div class="row">
                 <div class="col-sm-6">
@@ -46,7 +46,7 @@
                             <a href="#">
                                 <h5>Over 38 Rules</h5>
                             </a>
-                            <p>{{ config('app.name') }} has more than 38 rules.</p>
+                            <p>{{ $appName }} has more than 38 rules.</p>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                             <a href="#">
                                 <h5>Localization Error Message</h5>
                             </a>
-                            <p>{{ config('app.name') }} supports  more than 20 languages.</p>
+                            <p>{{ $appName }} supports  more than 20 languages.</p>
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                             <a href="#">
                                 <h5>Always Updates</h5>
                             </a>
-                            <p>{{ config('app.name') }} always updates to the latest version.</p>
+                            <p>{{ $appName }} always updates to the latest version.</p>
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                             <a href="#">
                                 <h5>Testing</h5>
                             </a>
-                            <p>{{ config('app.name') }} has tests for all rules, and you can use them with confidence.</p>
+                            <p>{{ $appName }} has tests for all rules, and you can use them with confidence.</p>
                         </div>
                     </div>
                 </div>
@@ -95,25 +95,8 @@
     <section class="doc_tag_area">
         <div class="container">
             <div class="section_title text-center">
-                <h2 class="h_title wow fadeInUp">Popular Tags</h2>
+                <h2 class="h_title wow fadeInUp">{{ $appName }}</h2>
             </div>
-            <ul class="nav nav-tabs doc_tag" id="myTab" role="tablist">
-                <li class="nav-item wow fadeInLeft">
-                    <a class="nav-link active" id="or-tab" data-toggle="tab" href="#or" role="tab" aria-controls="or" aria-selected="true">Ordering</a>
-                </li>
-                <li class="nav-item wow fadeInLeft" data-wow-delay="0.1s">
-                    <a class="nav-link" id="doc-tab" data-toggle="tab" href="#doc" role="tab" aria-controls="doc" aria-selected="false">Docs</a>
-                </li>
-                <li class="nav-item wow fadeInLeft" data-wow-delay="0.2s">
-                    <a class="nav-link" id="forum-tab" data-toggle="tab" href="#forum" role="tab" aria-controls="forum" aria-selected="false">Forum</a>
-                </li>
-                <li class="nav-item wow fadeInLeft" data-wow-delay="0.3s">
-                    <a class="nav-link" id="code-tab" data-toggle="tab" href="#code" role="tab" aria-controls="code" aria-selected="false">Code</a>
-                </li>
-                <li class="nav-item wow fadeInLeft" data-wow-delay="0.4s">
-                    <a class="nav-link" id="element-tab" data-toggle="tab" href="#element" role="tab" aria-controls="element" aria-selected="false">Elements</a>
-                </li>
-            </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane doc_tab_pane fade show active" id="or" role="tabpanel" aria-labelledby="or-tab">
                     <div class="row">
