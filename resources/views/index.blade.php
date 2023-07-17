@@ -33,40 +33,59 @@
 @section('content')
     <section class="doc_features_area_one">
         <div class="container">
+            <div class="section_title text-center">
+                <h2 class="h_title wow fadeInUp">Why {{ config('app.name') }}?</h2>
+            </div>
             <div class="row">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="media doc_features_item_one wow fadeInLeft" data-wow-delay="0.2s">
-                        <img src="img/home_one/Lamp_idea.png" alt="">
+                <div class="col-sm-6">
+                    <div class="media documentation_item wow fadeInUp">
+                        <div class="icon">
+                            <img src="{{ asset('img/correct.png') }}" alt="">
+                        </div>
                         <div class="media-body">
                             <a href="#">
-                                <h3>Knowledge Base</h3>
+                                <h5>Over 38 Rules</h5>
                             </a>
-                            <p>Oxford bonnet are you taking the piss cheeky mufty.</p>
-                            <a href="#" class="learn_btn">Learn More <i class="arrow_right"></i></a>
+                            <p>{{ config('app.name') }} has more than 38 rules.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="media doc_features_item_one wow fadeInLeft" data-wow-delay="0.5s">
-                        <img src="img/home_one/chat.png" alt="">
+                <div class="col-sm-6">
+                    <div class="media documentation_item wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="icon">
+                            <img src="{{ asset('img/correct.png') }}" alt="">
+                        </div>
                         <div class="media-body">
                             <a href="#">
-                                <h3>Community Forums</h3>
+                                <h5>Localization Error Message</h5>
                             </a>
-                            <p>Oxford bonnet are you taking the piss cheeky mufty.</p>
-                            <a href="#" class="learn_btn">Learn More <i class="arrow_right"></i></a>
+                            <p>{{ config('app.name') }} supports  more than 20 languages.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="media doc_features_item_one wow fadeInLeft" data-wow-delay="0.7s">
-                        <img src="img/home_one/Duplicate.png" alt="">
+                <div class="col-sm-6">
+                    <div class="media documentation_item wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="icon">
+                            <img src="{{ asset('img/correct.png') }}" alt="">
+                        </div>
                         <div class="media-body">
                             <a href="#">
-                                <h3>Documentation</h3>
+                                <h5>Always Updates</h5>
                             </a>
-                            <p>Oxford bonnet are you taking the piss cheeky mufty.</p>
-                            <a href="#" class="learn_btn">Learn More <i class="arrow_right"></i></a>
+                            <p>{{ config('app.name') }} always updates to the latest version.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="media documentation_item wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="icon">
+                            <img src="{{ asset('img/correct.png') }}" alt="">
+                        </div>
+                        <div class="media-body">
+                            <a href="#">
+                                <h5>Testing</h5>
+                            </a>
+                            <p>{{ config('app.name') }} has tests for all rules, and you can use them with confidence.</p>
                         </div>
                     </div>
                 </div>
@@ -592,414 +611,6 @@
                                     <li><a href="#"><i class="icon_document_alt"></i>How do i add FAQ post</a></li>
                                 </ul>
                                 <a href="#" class="learn_btn">View All<i class="arrow_right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="h_doc_documentation_area bg_color sec_pad">
-        <div class="container">
-            <div class="section_title text-center">
-                <h2 class="h_title wow fadeInUp">The Best Online Documentation</h2>
-                <p class="wow fadeInUp" data-wow-delay="0.4s">Loaded with awesome features like Documentation, Knowledgebase, Forum & more!</p>
-            </div>
-            <ul class="nav nav-tabs documentation_tab" id="myTabs" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="or" aria-selected="true">Docly</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="local-tab" data-toggle="tab" href="#local" role="tab" aria-controls="doc" aria-selected="false">Sdoc</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="word-tab" data-toggle="tab" href="#word" role="tab" aria-controls="forum" aria-selected="false">Spider Docs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="wiki-tab" data-toggle="tab" href="#wiki" role="tab" aria-controls="wiki" aria-selected="false">WikiDoc</a>
-                </li>
-            </ul>
-            <div class="tab-content" id="myTabContents">
-                <div class="tab-pane documentation_tab_pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="documentation_text">
-                                <div class="round wow fadeInUp">
-                                    <img src="img/home_one/icon/file1.png" alt="">
-                                </div>
-                                <h4 class="wow fadeInUp" data-wow-delay="0.2s">Build Any Page In Seconds</h4>
-                                <p class="wow fadeInUp" data-wow-delay="0.3s">Omnis voluptate magna inceptos id velit autem, harum phasellus quo. Officia congue, natoque imperdiet iusto malesuada placerat. Augue temporibus </p>
-                                <a href="#" class="learn_btn wow fadeInUp" data-wow-delay="0.4s">Learn More<i class="arrow_right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item wow fadeInUp">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/folder.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Working with Docs</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item wow fadeInUp" data-wow-delay="0.2s">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/envelope.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Formatting Content</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item wow fadeInUp" data-wow-delay="0.3s">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/smartphone.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Mobile Apps</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item wow fadeInUp" data-wow-delay="0.4s">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/management.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Account Management</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item wow fadeInUp" data-wow-delay="0.2s">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/newspaper.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Productivity</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item wow fadeInUp" data-wow-delay="0.4s">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/android.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Getting Started</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane documentation_tab_pane fade" id="local" role="tabpanel" aria-labelledby="local-tab">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="documentation_text">
-                                <div class="round">
-                                    <img src="img/home_one/icon/file1.png" alt="">
-                                </div>
-                                <h4>Build Any Page In Seconds</h4>
-                                <p>Omnis voluptate magna inceptos id velit autem, harum phasellus quo. Officia congue, natoque imperdiet iusto malesuada placerat. Augue temporibus </p>
-                                <a href="#" class="learn_btn">Learn More<i class="arrow_right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/smartphone.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Mobile Apps</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/management.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Account Management</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/folder.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Working with Docs</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/envelope.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Formatting Content</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/newspaper.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Productivity</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/android.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Getting Started</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane documentation_tab_pane fade" id="word" role="tabpanel" aria-labelledby="word-tab">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="documentation_text">
-                                <div class="round">
-                                    <img src="img/home_one/icon/file1.png" alt="">
-                                </div>
-                                <h4>Build Any Page In Seconds</h4>
-                                <p>Omnis voluptate magna inceptos id velit autem, harum phasellus quo. Officia congue, natoque imperdiet iusto malesuada placerat. Augue temporibus </p>
-                                <a href="#" class="learn_btn">Learn More<i class="arrow_right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/folder.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Working with Docs</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/envelope.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Formatting Content</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/smartphone.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Mobile Apps</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/management.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Account Management</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/newspaper.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Productivity</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/android.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Getting Started</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane documentation_tab_pane fade" id="wiki" role="tabpanel" aria-labelledby="wiki-tab">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="documentation_text">
-                                <div class="round">
-                                    <img src="img/home_one/icon/file1.png" alt="">
-                                </div>
-                                <h4>Build Any Page In Seconds</h4>
-                                <p>Omnis voluptate magna inceptos id velit autem, harum phasellus quo. Officia congue, natoque imperdiet iusto malesuada placerat. Augue temporibus </p>
-                                <a href="#" class="learn_btn">Learn More<i class="arrow_right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/folder.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Working with Docs</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/envelope.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Formatting Content</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/smartphone.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Mobile Apps</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/management.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Account Management</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/newspaper.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Productivity</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="media documentation_item">
-                                        <div class="icon">
-                                            <img src="img/home_one/icon/android.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <a href="#">
-                                                <h5>Getting Started</h5>
-                                            </a>
-                                            <p>He lost his bottle bubble and squeak knackered.!</p>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
