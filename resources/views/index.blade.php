@@ -95,107 +95,29 @@
     <section class="doc_tag_area">
         <div class="container">
             <div class="section_title text-center">
-                <h2 class="h_title wow fadeInUp">{{ $appName }}</h2>
+                <h2 class="h_title wow fadeInUp">{{ $appName }} Rules</h2>
             </div>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane doc_tab_pane fade show active" id="or" role="tabpanel" aria-labelledby="or-tab">
                     <div class="row">
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="doc_tag_item wow fadeInUp">
-                                <div class="doc_tag_title">
-                                    <h4>Getting Started</h4>
-                                    <div class="line"></div>
+                        @foreach($rules as $item)
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="doc_tag_item wow fadeInUp" data-wow-delay="0.1s">
+                                    <ul class="list-unstyled tag_list">
+                                        @foreach($item as $rule)
+                                            <li>
+                                                <a href="{{ route('docs', ['version' => config('app.doc-version'), 'page' => $rule]) }}">
+                                                    <i class="icon_document_alt"></i> {{ convertToAsideTitle($rule) }}
+                                                </a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                    <a href="{{ route('docs', ['version' => config('app.doc-version'), 'page' => 'all-rules']) }}"
+                                        class="learn_btn">View All<i class="arrow_right"></i>
+                                    </a>
                                 </div>
-                                <ul class="list-unstyled tag_list">
-                                    <li><a href="#"><i class="icon_document_alt"></i>Setup home page layout</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>BBpress sidebar layout styles</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>Knowledgebase page setup</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>Creating home page blocks</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>How do i add FAQ post</a></li>
-                                </ul>
-                                <a href="#" class="learn_btn">View All<i class="arrow_right"></i></a>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="doc_tag_item wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="doc_tag_title">
-                                    <h4>Integrations</h4>
-                                    <div class="line"></div>
-                                </div>
-                                <ul class="list-unstyled tag_list">
-                                    <li><a href="#"><i class="icon_document_alt"></i>How To Install Manual Theme</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>Theme license information</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>How do i create tree structure menu</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>How do I login forum section</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>How do I login forum section</a></li>
-                                </ul>
-                                <a href="#" class="learn_btn">View All<i class="arrow_right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="doc_tag_item wow fadeInUp" data-wow-delay="0.2s">
-                                <div class="doc_tag_title">
-                                    <h4>Cloud Server</h4>
-                                    <div class="line"></div>
-                                </div>
-                                <ul class="list-unstyled tag_list">
-                                    <li><a href="#"><i class="icon_document_alt"></i>Mailbox and User Settings</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>Preparing your server for installation</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>Managing Docs in Docly</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>How do i add FAQ post</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>Creating home page blocks</a></li>
-                                </ul>
-                                <a href="#" class="learn_btn">View All<i class="arrow_right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="doc_tag_item wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="doc_tag_title">
-                                    <h4>Solar System</h4>
-                                    <div class="line"></div>
-                                </div>
-                                <ul class="list-unstyled tag_list">
-                                    <li><a href="#"><i class="icon_document_alt"></i>How do I contact Customer Care?</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>How to enable labs features</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>Knowledgebase page setup</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>How do I login forum section</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>Mailbox and User Settings</a></li>
-                                </ul>
-                                <a href="#" class="learn_btn">View All<i class="arrow_right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="doc_tag_item wow fadeInUp" data-wow-delay="0.2s">
-                                <div class="doc_tag_title">
-                                    <h4>User Settings</h4>
-                                    <div class="line"></div>
-                                </div>
-                                <ul class="list-unstyled tag_list">
-                                    <li><a href="#"><i class="icon_document_alt"></i>Do I need to know coding</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>Managing Docs in Docly</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>Working with Conversations</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>Copying Email to Docly</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>Knowledgebase page setup</a></li>
-                                </ul>
-                                <a href="#" class="learn_btn">View All<i class="arrow_right"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="doc_tag_item wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="doc_tag_title">
-                                    <h4>Reporting</h4>
-                                    <div class="line"></div>
-                                </div>
-                                <ul class="list-unstyled tag_list">
-                                    <li><a href="#"><i class="icon_document_alt"></i>Setup home page layout</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>Can I attach files to forms?</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>Knowledgebase page setup</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>Creating home page blocks</a></li>
-                                    <li><a href="#"><i class="icon_document_alt"></i>How do i add FAQ post</a></li>
-                                </ul>
-                                <a href="#" class="learn_btn">View All<i class="arrow_right"></i></a>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="tab-pane fade" id="doc" role="tabpanel" aria-labelledby="doc-tab">

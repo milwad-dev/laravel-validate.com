@@ -15,7 +15,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    $rulesConfig = config('sidebar.rules', []);
+    unset($rulesConfig['all-rules']);
+
+    $rules = collect($rulesConfig)
+        ->take(30)
+        ->chunk(5)
+        ->all();
+
+    return view('index', compact('rules'));
 })->name('home.index');
 
 Route::get('docs/{version}/{page?}', DocsController::class)->name('docs');
